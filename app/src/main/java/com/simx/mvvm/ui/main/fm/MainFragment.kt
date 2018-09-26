@@ -5,6 +5,7 @@ import android.arch.lifecycle.ViewModelProviders
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.widget.GridLayoutManager
 import android.support.v7.widget.LinearLayoutManager
 import android.util.Log
 import android.view.LayoutInflater
@@ -41,7 +42,7 @@ class MainFragment : Fragment(), AdapterMenu.onAdapterClicked {
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
         adapterMenu   = AdapterMenu(listOf(), this)
         mainFragmentBinding.rcvManu.setHasFixedSize(true)
-        mainFragmentBinding.rcvManu.layoutManager = LinearLayoutManager(this.context)
+        mainFragmentBinding.rcvManu.layoutManager = GridLayoutManager(this.context,4)
         mainFragmentBinding.rcvManu.adapter = adapterMenu
         viewModel.gdataMenu()?.subscribe (
                 {adapterMenu.setMenu(it.pintroMenu)},
