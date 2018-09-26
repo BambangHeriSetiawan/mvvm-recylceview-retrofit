@@ -1,0 +1,129 @@
+ext {
+    versions = [
+            compileSdk        : 28,
+            buildToolsVersion : "27.1.0",
+            supportLib        : '28.0.0',
+            supportLibX       : '28.0.0',
+            multidexVer       : '2.0.0',
+            constraintLayout  : '1.1.2',
+            minSdk            : 16,
+            targetSdk         : 28,
+            butterknifeVersion: '8.8.1',
+            daggerVersion     : '2.11',
+            rxAndroidVer      : '2.0.1',
+            rxJavaVer         : '2.1.9',
+            rxJavaAdapterVer  : '2.4.0',
+            okhttpVer         : '3.11.0',
+            roomVer           : '1.0.0',
+            gsonVer           : '2.8.5',
+            retroVer          : '2.4.0',
+            butterVer         : '8.8.1',
+            glideVer          : '4.5.0',
+            dagger2Ver        : '2.13',
+            firebaseVer       : '11.8.0',
+            firebaseUiVer     : '3.2.1',
+            crashlyticsVer    : '2.9.1',
+            lifecycleVer      : '1.1.1'
+    ]
+    libraries = [
+            //Android Liberary
+            appcompatV7             :"com.android.support:appcompat-v7:$versions.supportLib",
+            recyclerviewV7          :"com.android.support:recyclerview-v7:$versions.supportLib",
+            cardviewV7              :"com.android.support:cardview-v7:$versions.supportLib",
+            supportV4               :"com.android.support:support-v4:$versions.supportLib",
+            design                  :"com.android.support:design:$versions.supportLib",
+            constraintLayout        :"com.android.support.constraint:constraint-layout:$versions.constraintLayout",
+
+            //Netrork
+            rxandroid               :"io.reactivex.rxjava2:rxandroid:$versions.rxAndroidVer",
+            rxjava2                 :"io.reactivex.rxjava2:rxjava:$versions.rxJavaVer",
+            okhttp                  :"com.squareup.okhttp3:okhttp:$versions.okhttpVer",
+            interceptor             :"com.squareup.okhttp3:logging-interceptor:$versions.okhttpVer",
+            gson                    :"com.google.code.gson:gson:$versions.gsonVer",
+            retrofit2               :"com.squareup.retrofit2:retrofit:$versions.retroVer",
+            adapterRxjava2          :"com.squareup.retrofit2:adapter-rxjava2:$versions.retroVer",
+            converterGson           :"com.squareup.retrofit2:converter-gson:$versions.retroVer",
+            retrofit2Rxjava2Adapter :"com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
+
+            //Google Liberary
+            playServicesAuth      :"com.google.android.gms:play-services-auth:$versions.firebaseVer",
+            playServicesPlus      :"com.google.android.gms:play-services-plus:$versions.firebaseVer",
+            playServicesAwareness :"com.google.android.gms:play-services-awareness:$versions.firebaseVer",
+            playServicesLocation  :"com.google.android.gms:play-services-location:$versions.firebaseVer",
+            playServicesMaps      :"com.google.android.gms:play-services-maps:$versions.firebaseVer",
+            playServices           :"com.google.android.gms:play-services:$versions.firebaseVer",
+
+            //Firebase all
+            firebaseCore           :"com.google.firebase:firebase-core:$versions.firebaseVer",
+            firebaseAuth           :"com.google.firebase:firebase-auth:$versions.firebaseVer",
+            firebaseDatabase       :"com.google.firebase:firebase-database:$versions.firebaseVer",
+            firebaseFirestore      :"com.google.firebase:firebase-firestore:$versions.firebaseVer",
+            firebaseStorage        :"com.google.firebase:firebase-storage:$versions.firebaseVer",
+            firebaseMessaging      :"com.google.firebase:firebase-messaging:$versions.firebaseVer",
+            firebaseConfig         :"com.google.firebase:firebase-config:$versions.firebaseVer",
+            firebaseInvites        :"com.google.firebase:firebase-invites:$versions.firebaseVer",
+            firebaseAds            :"com.google.firebase:firebase-ads:$versions.firebaseVer",
+            firebaseAppindexing    :"com.google.firebase:firebase-appindexing:$versions.firebaseVer",
+            firebasePerf            :"com.google.firebase:firebase-perf:$versions.firebaseVer",
+            crashlytics             :"com.crashlytics.sdk.android:crashlytics:$versions.crashlyticsVer",
+
+            //Butterknige
+            butterknife             :"com.jakewharton:butterknife:$versions.butterknifeVersion",
+            butterknifeCompiler     :"com.jakewharton:butterknife-compiler:$versions.butterknifeVersion",
+
+            //Glide
+            glide                   :"com.github.bumptech.glide:glide:$versions.glideVer",
+            glideCompiler           :"com.github.bumptech.glide:compiler:$versions.glideVer",
+
+            //Dagger 2
+            dagger2Compiler         :"com.google.dagger:dagger-compiler:$versions.daggerVersion",
+            dagger2Processor        :"com.google.dagger:dagger-android-processor:$versions.daggerVersion",
+            dagger                  :"com.google.dagger:dagger:$versions.daggerVersion",
+            daggerAndorid           :"com.google.dagger:dagger-android:$versions.daggerVersion",
+            daggerAndroidSupport    :"com.google.dagger:dagger-android-support:$versions.daggerVersion",
+
+            //Tools
+            calligraphy             :"uk.co.chrisjenx:calligraphy:2.3.0",
+            circleimageview         :"de.hdodenhof:circleimageview:2.1.0",
+            easypermissions         :"pub.devrel:easypermissions:1.1.3",
+            materialdatetimepicker  :"com.wdullaer:materialdatetimepicker:3.1.3",
+            imageCropper           :"com.theartofdev.edmodo:android-image-cropper:2.3.0",
+            multidex                :"com.android.support:multidex:1.0.3",
+            geofire                 :"com.firebase:geofire-android:2.1.3",
+
+            // ViewModel and LiveData
+            lifecycleExtensions    :"android.arch.lifecycle:extensions:$versions.lifecycleVer",
+            // alternatively, just ViewModel
+            lifecycleViewmodel     :"android.arch.lifecycle:viewmodel:$versions.lifecycleVer",
+            // alternatively, just LiveData
+            lifecycleLivedata      :"android.arch.lifecycle:livedata:$versions.lifecycleVer",
+            annotationLifecycleCompiler     :"android.arch.lifecycle:compiler:$versions.lifecycleVer",
+            // Room (use 1.1.0-beta1 for latest beta)
+            room                    :"android.arch.persistence.room:runtime:$versions.room",
+            annotationroom          :"android.arch.persistence.room:compiler:$versions.room",
+            // Paging
+            paging                  :"android.arch.paging:runtime:1.0.0-alpha7",
+            // Test helpers for LiveData
+            coreTestings           :"android.arch.core:core-testing:$versions.lifecycleVer",
+            // Test helpers for Room
+            roomTesting            :"android.arch.persistence.room:testing:$versions.room"
+    ]
+    librariesx = [
+            appcompat               :"com.android.support:appcompat-v7:$versions.supportLibX",
+            legacySupportCoreUi     :"androidx.legacy:legacy-support-core-ui:$versions.supportLibX",
+            legacySupportCoreUtils  :"androidx.legacy:legacy-support-core-utils:$versions.supportLibX",
+            slidingpanelayout       :"androidx.slidingpanelayout:slidingpanelayout:$versions.supportLibX",
+            annotation              :"androidx.annotation:annotation:$versions.supportLibX",
+            core                    :"androidx.core:core:$versions.supportLibX",
+            contentpager            :"androidx.contentpager:contentpager:$versions.supportLibX",
+            multidex                :"androidx.multidex:multidex:$versions.multidexVer",
+            viewpager               :"androidx.viewpager:viewpager:$versions.supportLibX",
+            webkit                  :"androidx.webkit:webkit:$versions.supportLibX",
+            fragment                :"androidx.fragment:fragment:$versions.supportLibX",
+            recyclerview            :"androidx.recyclerview:recyclerview:$versions.supportLibX",
+            drawerlayout            :"androidx.drawerlayout:drawerlayout:$versions.supportLibX",
+            coordinatorlayout       :"androidx.coordinatorlayout:coordinatorlayout:$versions.supportLibX",
+            cardview                :"androidx.cardview:cardview:$versions.supportLibX",
+            design                  :"com.google.android.material:material:$versions.supportLibX"
+    ]
+}
