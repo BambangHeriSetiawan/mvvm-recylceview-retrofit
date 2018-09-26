@@ -33,6 +33,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation ('com.github.bumptech.glide:okhttp3-integration:4.8.0'){
+        exclude group: 'glide-parent'
+    }
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation libraries.appcompatV7
     implementation libraries.recyclerviewV7
